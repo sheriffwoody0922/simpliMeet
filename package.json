@@ -10,7 +10,9 @@
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
     "generate": "prisma generate && prisma db push",
-    "studio": "prisma studio"
+    "studio": "prisma studio",
+    "test": "jest",
+    "jest-preview": "jest-preview"
   },
   "dependencies": {
     "@mantine/core": "^7.6.2",
