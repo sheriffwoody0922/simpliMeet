@@ -44,12 +44,6 @@ Install dependencies:
 npm install
 ```
 
-Run the Vite dev server:
-
-```shellscript
-npm run dev
-```
-
 ### Prisma
 
 This template includes Prisma for database access.
@@ -63,6 +57,13 @@ To view the Prisma Studio, run:
 
 ```shellscript
 npx prisma studio
+```
+
+## Run
+Run the Vite dev server:
+
+```shellscript
+npm run dev
 ```
 
 ## Deployment
