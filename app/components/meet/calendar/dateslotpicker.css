@@ -1,0 +1,24 @@
+.mantine-Calendar-monthCell button {
+  border-radius: 50%;
+  font-weight: 600;
+  color: rgb(83, 83, 83);
+}
+
+.mantine-Calendar-monthCell button[data-today] {
+  color: #974949;
+  font-weight: 700;
+}
+
+.mantine-Calendar-monthCell button[data-selected] {
+  background-color: #974949;
+  color: white !important;
+}
+
+.mantine-Calendar-day{
+  border: solid 1px;
+  border-color: #974949;
+}
+
+.mantine-Calendar-monthCell button[data-disabled]{
+  border-color: rgba(0,0,0,0);
+}
