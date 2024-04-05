@@ -8,6 +8,7 @@ This Meeting Schedule App allows users to manage and schedule meetings efficient
 `Set available times based on weekdays`: 
 Users have the option to specify available time slots based on weekdays, thereby optimizing organizational efficiency and boosting productivity.
 <img src="./docs/availability.png" alt="User availability management" width="600">
+
 `Schedule new meetings`: Users can conveniently schedule new meetings by specifying the date, time on the Calendar.
 <img src="./docs/book.png" alt="User availability management" width="600">
 
