@@ -24,6 +24,6 @@ model Booking {
   name          String
   email         String
   description   String
-  dateTime      DateTime
+  dateTime      DateTime  @unique
   createdAt     DateTime  @default(now())
 }

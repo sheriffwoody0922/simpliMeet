@@ -32,8 +32,18 @@ export const action = async ({
     }
   
     try {
-        await prisma.$transaction([
-        prisma.booking.create({
+      await prisma.$transaction(async (prisma) => {
+        const anyBeforeBook = await prisma.booking.findMany({
+          where: {
+            dateTime: date
+          }
+        });
+
+        if (anyBeforeBook.length > 0 ) {
+          throw new Error('Appointment time is already booked for this user.');
+        } 
+
+        return prisma.booking.create({
           data: {
             name: name.toString(),
             email: email.toString(),
@@ -41,12 +51,9 @@ export const action = async ({
             dateTime: date
           }
         })
-      ]);
+      });
     } catch (error) {
-      return new Response('This slot was already booked!', {
-        status: 400
-      })
+      return new Response("This slot was already booked!", { status: 409 });
     }
-
     return 'success';
 };
