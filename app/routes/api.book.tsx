@@ -53,7 +53,14 @@ export const action = async ({
         })
       });
     } catch (error) {
-      return new Response("This slot was already booked!", { status: 409 });
+      if (error.code === 'P2034') { // This is the code for a unique constraint violation
+        return new Response("This slot was already booked!", { status: 409 });
+      } else {
+        return new Response('An error occurred', {
+          status: 500
+        });
+      }
     }
+
     return 'success';
 };
